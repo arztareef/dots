@@ -20,10 +20,7 @@ setopt hist_expire_dups_first # Expire duplicates first
 setopt hist_ignore_dups # do not store duplications
 setopt hist_find_no_dups # ignore duplicates when searching
 setopt hist_reduce_blanks # reduce blanks from history
-setopt hist_verify # allows to change !! before execution
-setopt correct # Correction to invalid commands.
-setopt correct_all # Same thing
-setopt interactivecomments # allow comments in inline terminal
+setopt hist_verify # allows to change !! before execution setopt correct # Correction to invalid commands. setopt correct_all # Same thing setopt interactivecomments # allow comments in inline terminal
 setopt list_rows_first
 
 ########## History
@@ -49,7 +46,7 @@ alias dmenuconf="$HOME/.local/share/dmenu"
 alias dwmbconf="$HOME/.local/share/dwmblocks"
 alias stconf="$HOME/.local/share/st"
 alias localshare="$HOME/.local/share/"
-alias dotfiles="$HOME/.dotfiles/"
+alias dots="$HOME/.dots/"
 alias nvconf="$HOME/.config/nvim"
 alias sbarconf="$HOME/.local/share/sbar"
 alias zrc="nvim $HOME/.config/zsh/.zshrc && source ~/.config/zsh/.zshrc"
@@ -75,6 +72,7 @@ export EDITOR="nvim"
 export TERM="xterm-256color"
 export BROWSER="firefox"
 export XDG_CONFIG_HOME="$HOME/.config"
+export XDG_DATA_HOME="$HOME/.local/share/"
 export GOPATH="$HOME/.local/share/go"
 export BAT_THEME="ansi"
 export MANPAGER="nvim +Man!"
@@ -83,17 +81,14 @@ if [ -d "$HOME/.local/bin" ]; then
     export PATH=$PATH:$HOME/.local/bin
 fi
 
-export PATH=$PATH:$HOME/.local/share/sbar/
-export PATH=$PATH:$HOME/.local/share/sbar/widgets/
-
 ########## PROMPT
 PROMPT="%(?.(%F{4}%B%n%b%f%) %F{13}%1~%f > .(%F{1}%B%n%b%f%) %F{13}%1~%f > )"
 RPROMPT="%(?..:()"
 
 ########## SOURCING
 
-source /usr/local/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
-source /usr/local/share/zsh-autosuggestions/zsh-autosuggestions.zsh
+source /usr/share/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
+source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 
 ZSH_AUTOSUGGEST_MANUAL_REBIND=" "
 
@@ -121,9 +116,9 @@ ZSH_HIGHLIGHT_STYLES[comment]='fg=7,underline'
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
 # pnpm
-export PNPM_HOME="/Users/manik/Library/pnpm"
-case ":$PATH:" in
-  *":$PNPM_HOME:"*) ;;
-  *) export PATH="$PNPM_HOME:$PATH" ;;
-esac
+# export PNPM_HOME="/Users/manik/Library/pnpm"
+# case ":$PATH:" in
+#   *":$PNPM_HOME:"*) ;;
+#   *) export PATH="$PNPM_HOME:$PATH" ;;
+# esac
 # pnpm end
