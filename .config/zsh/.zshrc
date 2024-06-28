@@ -75,7 +75,7 @@ export XDG_CONFIG_HOME="$HOME/.config"
 export XDG_DATA_HOME="$HOME/.local/share/"
 export GOPATH="$HOME/.local/share/go"
 export BAT_THEME="ansi"
-export MANPAGER="nvim +Man!"
+export XCURSOR_PATH=${XCURSOR_PATH}:$HOME/.icons:$HOME/.local/share/icons
 
 if [ -d "$HOME/.local/bin" ]; then
     export PATH=$PATH:$HOME/.local/bin
