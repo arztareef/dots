@@ -29,7 +29,19 @@ HISTFILE=${ZDOTDIR:-$HOME}/.zsh_history # File location to save the history in (
 SAVEHIST=4096 # Amount of lines to save in .zsh_history
 HISTSIZE=256 # Amount of lines to load in a current session from .zsh_history
 
+########## Themes
+
+# Tardwm
+export red="#d96c70"
+export green="#8abd80"
+export blue="#6f8fae"
+export gray="#333333"
+export white="#cccccc"
+export fg="#666666"
+export black="#24272c"
+
 ########## Aliases
+
 
 alias nv="nvim"
 alias -g ls='eza --icons always'
@@ -55,6 +67,7 @@ alias geverything="git add . && git commit -m \"new update\" && git push origin 
 alias incle="rm config.h; sudo make clean install && make clean"
 alias config="cd $HOME/.config"
 alias clswp='rm -rf $HOME/.local/state/nvim/swap/*'
+alias killsbar="kill -9 $(cat ~/.cache/pidofbar) && xsetroot -name \"Killed sbar.\""
 
 ########## Completion
 
@@ -80,6 +93,7 @@ export XCURSOR_PATH=${XCURSOR_PATH}:$HOME/.icons:$HOME/.local/share/icons
 if [ -d "$HOME/.local/bin" ]; then
     export PATH=$PATH:$HOME/.local/bin
 fi
+export PATH=$PATH:/home/tareef/.local/share/dwmblocks/scripts
 
 ########## PROMPT
 PROMPT="%(?.(%F{4}%B%n%b%f%) %F{13}%1~%f > .(%F{1}%B%n%b%f%) %F{13}%1~%f > )"
