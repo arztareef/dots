@@ -68,6 +68,7 @@ alias incle="rm config.h; sudo make clean install && make clean"
 alias config="cd $HOME/.config"
 alias clswp='rm -rf $HOME/.local/state/nvim/swap/*'
 alias killsbar="kill -9 $(cat ~/.cache/pidofbar) && xsetroot -name \"Killed sbar.\""
+alias unlockdb="sudo rm -vf /var/lib/pacman/db.lck"
 
 ########## Completion
 
