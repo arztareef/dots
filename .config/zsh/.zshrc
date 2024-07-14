@@ -131,36 +131,4 @@ ZSH_HIGHLIGHT_STYLES[comment]='fg=7,underline'
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
-# pnpm
-# export PNPM_HOME="/Users/manik/Library/pnpm"
-# case ":$PATH:" in
-#   *":$PNPM_HOME:"*) ;;
-#   *) export PATH="$PNPM_HOME:$PATH" ;;
-# esac
-# pnpm end
-
-# git prompt
-git_prompt_info() {
-  ref=$(git symbolic-ref HEAD 2> /dev/null) || return
-  
-  # Check for staged changes
-  if [[ $(git diff --cached --quiet 2> /dev/null; echo $?) == 0 ]]; then
-    staged="%F{green}●%f"
-  else
-    staged="%F{red}●%f"
-  fi
-  
-  # Check for unstaged changes
-  if [[ $(git diff --quiet 2> /dev/null; echo $?) == 0 ]]; then
-    unstaged=""
-  else
-    unstaged="%F{yellow}●%f"
-  fi
-  
-  echo "[$ref] $staged$unstaged"
-}
-
-setopt promptsubst
-
-RPROMPT='$(git_prompt_info)'
 
