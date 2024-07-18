@@ -94,7 +94,10 @@ export XCURSOR_PATH=${XCURSOR_PATH}:$HOME/.icons:$HOME/.local/share/icons
 if [ -d "$HOME/.local/bin" ]; then
     export PATH=$PATH:$HOME/.local/bin
 fi
-export PATH=$PATH:/home/tareef/.local/share/dwmblocks/scripts
+
+if [ -d "$HOME/.cargo/bin" ]; then
+    export PATH=$PATH:$HOME/.cargo/bin
+fi
 
 ########## PROMPT
 PROMPT="%(?.(%F{4}%B%n%b%f%) %F{13}%1~%f > .(%F{1}%B%n%b%f%) %F{13}%1~%f > )"
