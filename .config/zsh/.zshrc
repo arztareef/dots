@@ -84,7 +84,7 @@ autoload bashcompinit && bashcompinit
 
 export EDITOR="nvim"
 export TERM="xterm-256color"
-export BROWSER="firefox"
+export BROWSER="librewolf"
 export XDG_CONFIG_HOME="$HOME/.config"
 export XDG_DATA_HOME="$HOME/.local/share/"
 export GOPATH="$HOME/.local/share/go"
@@ -97,6 +97,10 @@ fi
 
 if [ -d "$HOME/.cargo/bin" ]; then
     export PATH=$PATH:$HOME/.cargo/bin
+fi
+
+if [ -d "$HOME/.local/share/nvim/mason/bin" ]; then
+    export PATH=$PATH:$HOME/.local/share/nvim/mason/bin
 fi
 
 ########## PROMPT
