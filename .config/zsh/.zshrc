@@ -12,8 +12,6 @@
 
 setopt no_case_glob # Case Insensitive globbing
 setopt auto_cd # Auto Changed Directory i.g .. /tmp /etc
-setopt extended_history # Add extended data to the history (time stamped and elapsed time)
-setopt share_history # Share history
 setopt append_history # Append the history instead of overwriting it.
 setopt inc_append_history # Save history after every command instead of exiting it
 setopt hist_expire_dups_first # Expire duplicates first
@@ -69,6 +67,7 @@ alias config="cd $HOME/.config"
 alias clswp='rm -rf $HOME/.local/state/nvim/swap/*'
 alias killsbar="kill -9 $(cat ~/.cache/pidofbar) && xsetroot -name \"Killed sbar.\""
 alias unlockdb="sudo rm -vf /var/lib/pacman/db.lck"
+alias lg="lazygit"
 
 ########## Completion
 
