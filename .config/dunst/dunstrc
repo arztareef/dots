@@ -33,7 +33,7 @@
     origin = top-left
 
     # Offset from the origin
-    offset = (10, 50)
+    offset = (15, 50)
 
     # Scale factor. It is auto-detected if value is 0.
     scale = 0
@@ -199,7 +199,7 @@
     ignore_newline = no
 
     # Stack together notifications with the same content
-    stack_duplicates = true
+    stack_duplicates = false
 
     # Hide the count of stacked notifications with the same content
     hide_duplicate_count = false
@@ -342,7 +342,7 @@
 [urgency_normal]
     background = "#24272c"
     foreground = "#bbbbbb"
-    timeout = 10
+    timeout = 15
     override_pause_level = 30
     # Icon for notifications with normal urgency, uncomment to enable
     #default_icon = /path/to/icon
