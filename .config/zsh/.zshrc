@@ -18,7 +18,10 @@ setopt hist_expire_dups_first # Expire duplicates first
 setopt hist_ignore_dups # do not store duplications
 setopt hist_find_no_dups # ignore duplicates when searching
 setopt hist_reduce_blanks # reduce blanks from history
-setopt hist_verify # allows to change !! before execution setopt correct # Correction to invalid commands. setopt correct_all # Same thing setopt interactivecomments # allow comments in inline terminal
+setopt hist_verify # allows to change !! before execution 
+setopt correct # Correction to invalid commands. 
+setopt correct_all # Same thing 
+setopt interactivecomments # allow comments in inline terminal
 setopt list_rows_first
 
 ########## History
