@@ -19,8 +19,8 @@ setopt hist_ignore_dups # do not store duplications
 setopt hist_find_no_dups # ignore duplicates when searching
 setopt hist_reduce_blanks # reduce blanks from history
 setopt hist_verify # allows to change !! before execution
-setopt correct # Correction to invalid commands.
-setopt correct_all # Same thing
+# setopt correct # Correction to invalid commands.
+# setopt correct_all # Same thing
 setopt interactivecomments # allow comments in inline terminal
 setopt list_rows_first
 
@@ -108,6 +108,22 @@ fi
 if [ -d "$HOME/.local/share/go/bin/" ]; then
     export PATH=$PATH:$HOME/.local/share/go/bin/
 fi
+
+########## Window title
+# Function to set terminal title
+set_title() {
+    echo -ne "\033]0;$1\a"
+}
+
+# Hook to set the title before each command runs
+preexec() {
+    set_title "$1"
+}
+
+# Hook to reset the title after each command finishes
+precmd() {
+    set_title "st"
+}
 
 ########## PROMPT
 PROMPT="%(?.(%F{4}%B%n%b%f%) %F{13}%1~%f > .(%F{1}%B%n%b%f%) %F{13}%1~%f > )"
