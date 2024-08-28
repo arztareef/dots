@@ -71,6 +71,7 @@ alias clswp='rm -rf $HOME/.local/state/nvim/swap/*'
 alias killsbar="kill -9 $(cat ~/.cache/pidofbar) && xsetroot -name \"Killed sbar.\""
 alias unlockdb="sudo rm -vf /var/lib/pacman/db.lck"
 alias lg="lazygit"
+alias dwmcs="nvim /usr/local/bin/cheatsheet.md"
 
 ########## Completion
 
