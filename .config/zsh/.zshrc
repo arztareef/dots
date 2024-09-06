@@ -49,9 +49,9 @@ alias -g ls='eza --icons always'
 alias -g ll='ls -l'
 alias -g la='ls -la'
 alias open='xdg-open'
-alias -g pcup="sudo pacman -Syu"
-alias -g pcin="sudo pacman -S"
-alias -g pcrm="sudo pacman -Rsnc"
+alias -g pcup="doas pacman -Syu"
+alias -g pcin="doas pacman -S"
+alias -g pcrm="doas pacman -Rsnc"
 alias zconf="$HOME/.config/zsh"
 alias dwmconf="$HOME/.local/share/dwm"
 alias dwmauto="nv $HOME/.local/share/dwm/autostart.sh"
@@ -65,11 +65,11 @@ alias sbarconf="$HOME/.local/share/sbar"
 alias zrc="nvim $HOME/.config/zsh/.zshrc && source ~/.config/zsh/.zshrc"
 alias srczsh="source $HOME/.config/zsh/.zshrc"
 alias geverything="git add . && git commit -m \"new update\" && git push origin master"
-alias incle="rm config.h; sudo make clean install && make clean"
+alias incle="rm config.h; doas make clean install && make clean"
 alias config="cd $HOME/.config"
 alias clswp='rm -rf $HOME/.local/state/nvim/swap/*'
 alias killsbar="kill -9 $(cat ~/.cache/pidofbar) && xsetroot -name \"Killed sbar.\""
-alias unlockdb="sudo rm -vf /var/lib/pacman/db.lck"
+alias unlockdb="doas rm -vf /var/lib/pacman/db.lck"
 alias lg="lazygit"
 alias dwmcs="nvim /usr/local/bin/cheatsheet.md"
 
@@ -134,6 +134,7 @@ RPROMPT="%(?..:()"
 
 source /usr/share/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
 source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+source /usr/share/zsh/plugins/zsh-you-should-use/you-should-use.plugin.zsh
 source $ZDOTDIR/.git-prompt.sh
 
 ZSH_AUTOSUGGEST_MANUAL_REBIND=" "
