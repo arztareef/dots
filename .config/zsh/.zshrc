@@ -44,7 +44,6 @@ export black="#24272c"
 ########## Aliases
 
 
-alias nv="nvim"
 alias -g ls='eza --icons always'
 alias -g ll='ls -l'
 alias -g la='ls -la'
@@ -136,6 +135,8 @@ source /usr/share/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
 source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 source /usr/share/zsh/plugins/zsh-you-should-use/you-should-use.plugin.zsh
 source $ZDOTDIR/.git-prompt.sh
+eval $(thefuck --alias)
+eval "$(starship init zsh)"
 
 ZSH_AUTOSUGGEST_MANUAL_REBIND=" "
 
