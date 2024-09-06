@@ -142,6 +142,7 @@ ZSH_AUTOSUGGEST_MANUAL_REBIND=" "
 
 typeset -A ZSH_HIGHLIGHT_STYLES
 
+ZSH_AUTOSUGGEST_STRATEGY=(history completion)
 ZSH_HIGHLIGHT_STYLES[unknown-token]='fg=1,bold'
 ZSH_HIGHLIGHT_STYLES[reserved-word]='fg=135,bold'
 ZSH_HIGHLIGHT_STYLES[alias]='fg=5,underline'
