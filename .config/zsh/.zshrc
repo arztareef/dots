@@ -30,19 +30,8 @@ HISTFILE=${ZDOTDIR:-$HOME}/.zsh_history # File location to save the history in (
 SAVEHIST=4096 # Amount of lines to save in .zsh_history
 HISTSIZE=256 # Amount of lines to load in a current session from .zsh_history
 
-########## Themes
-
-# Tardwm
-export red="#d96c70"
-export green="#8abd80"
-export blue="#6f8fae"
-export gray="#333333"
-export white="#cccccc"
-export fg="#666666"
-export black="#24272c"
 
 ########## Aliases
-
 
 alias -g ls='eza --icons always'
 alias -g ll='ls -l'
@@ -65,6 +54,8 @@ alias zrc="nvim $HOME/.config/zsh/.zshrc && source ~/.config/zsh/.zshrc"
 alias srczsh="source $HOME/.config/zsh/.zshrc"
 alias geverything="git add . && git commit -m \"new update\" && git push origin master"
 alias incle="rm config.h; doas make clean install && make clean"
+alias vim="nvim"
+alias nv="nvim"
 alias config="cd $HOME/.config"
 alias clswp='rm -rf $HOME/.local/state/nvim/swap/*'
 alias killsbar="kill -9 $(cat ~/.cache/pidofbar) && xsetroot -name \"Killed sbar.\""
@@ -84,8 +75,9 @@ autoload bashcompinit && bashcompinit
 
 ########## Exporting Variables
 
-export EDITOR="nvim"
-export MANPAGER="nvim +Man!"
+export EDITOR=nvim
+export VISUAL=nvim
+export MANPAGER='nvim +Man!'
 export TERM="xterm-256color"
 export BROWSER="librewolf"
 export XDG_CONFIG_HOME="$HOME/.config"
@@ -133,7 +125,6 @@ RPROMPT="%(?..:()"
 
 source /usr/share/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
 source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
-source /usr/share/zsh/plugins/zsh-you-should-use/you-should-use.plugin.zsh
 source $ZDOTDIR/.git-prompt.sh
 eval $(thefuck --alias)
 eval "$(starship init zsh)"
