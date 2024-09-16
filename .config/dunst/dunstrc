@@ -340,7 +340,7 @@
     #default_icon = /path/to/icon
 
 [urgency_normal]
-    background = "#242b38"
+    background = "#24272c"
     foreground = "#bbbbbb"
     timeout = 15
     override_pause_level = 30
