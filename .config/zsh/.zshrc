@@ -52,6 +52,7 @@ alias nvconf="$HOME/.config/nvim"
 alias sbarconf="$HOME/.local/share/sbar"
 alias zrc="nvim $HOME/.config/zsh/.zshrc && source ~/.config/zsh/.zshrc"
 alias srczsh="source $HOME/.config/zsh/.zshrc"
+alias rel="xrdb merge ~/.Xresources && kill -USR1 $(pidof st)"
 alias geverything="git add . && git commit -m \"new update\" && git push origin master"
 alias incle="rm config.h; doas make clean install && make clean"
 alias vim="nvim"
@@ -62,6 +63,7 @@ alias killsbar="kill -9 $(cat ~/.cache/pidofbar) && xsetroot -name \"Killed sbar
 alias unlockdb="doas rm -vf /var/lib/pacman/db.lck"
 alias lg="lazygit"
 alias dwmcs="nvim /usr/local/bin/cheatsheet.md"
+alias sudo="doas"
 
 ########## Completion
 
@@ -79,7 +81,7 @@ export EDITOR=nvim
 export VISUAL=nvim
 # export MANPAGER='nvim +Man!'
 export TERM="xterm-256color"
-export BROWSER="librewolf"
+export BROWSER="firefox"
 export XDG_CONFIG_HOME="$HOME/.config"
 export XDG_DATA_HOME="$HOME/.local/share/"
 export GOPATH="$HOME/.local/share/go"
@@ -99,6 +101,10 @@ fi
 
 if [ -d "$HOME/.local/share/go/bin/" ]; then
     export PATH=$PATH:$HOME/.local/share/go/bin/
+fi
+
+if [ -d "$HOME/.local/share/bob/nvim-bin/" ]; then
+    export PATH=$HOME/.local/share/bob/nvim-bin/:$PATH
 fi
 
 ########## Window title
@@ -127,7 +133,8 @@ source /usr/share/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
 source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 source $ZDOTDIR/.git-prompt.sh
 eval $(thefuck --alias)
-eval "$(starship init zsh)"
+eval "$(zoxide init zsh)"
+source <(fzf --zsh)
 
 ZSH_AUTOSUGGEST_MANUAL_REBIND=" "
 
@@ -153,6 +160,6 @@ ZSH_HIGHLIGHT_STYLES[double-quoted-argument-unclosed]='fg=12,underline'
 ZSH_HIGHLIGHT_STYLES[redirection]='fg=12,bold'
 ZSH_HIGHLIGHT_STYLES[comment]='fg=7,underline'
 
-[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
+eval "$(starship init zsh)"
 
