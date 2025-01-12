@@ -109,22 +109,6 @@ if [ -d "$HOME/.local/share/bob/nvim-bin/" ]; then
     export PATH=$HOME/.local/share/bob/nvim-bin/:$PATH
 fi
 
-########## Window title
-# Function to set terminal title
-set_title() {
-    echo -ne "\033]0;$1\a"
-}
-
-# Hook to set the title before each command runs
-preexec() {
-    set_title "$1"
-}
-
-# Hook to reset the title after each command finishes
-precmd() {
-    set_title "st"
-}
-
 ########## PROMPT
 PROMPT="%(?.(%F{4}%B%n%b%f%) %F{13}%1~%f > .(%F{1}%B%n%b%f%) %F{13}%1~%f > )"
 RPROMPT="%(?..:()"
