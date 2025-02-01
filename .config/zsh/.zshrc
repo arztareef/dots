@@ -95,7 +95,7 @@ if [ -d "$HOME/.local/bin" ]; then
 fi
 
 if [ -d "$HOME/.cargo/bin" ]; then
-    export PATH=$PATH:$HOME/.cargo/bin
+    export PATH=$HOME/.cargo/bin:$PATH
 fi
 
 if [ -d "$HOME/.local/share/nvim/mason/bin" ]; then
