@@ -7,3 +7,5 @@ alias l="eza -l --color=always --icons=always --group-directories-first -h"
 alias la="eza -la --color=always --icons=always --group-directories-first -h"
 alias ld="eza -D --color=always --icons=always --group-directories-first"
 alias lf="eza -f --color=always --icons=always --group-directories-first"
+alias fk='fuck'
+alias bal='bob update --all'
