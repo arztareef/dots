@@ -1,0 +1,1 @@
+.config/zsh/completion.zsh
