@@ -11,4 +11,3 @@ alias fk='fuck'
 alias bal='bob update --all'
 alias n='nvim'
 alias v="vim"
-alias nf="nvim $(fzf)"
