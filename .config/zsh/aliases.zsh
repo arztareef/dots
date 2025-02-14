@@ -9,3 +9,6 @@ alias ld="eza -D --color=always --icons=always --group-directories-first"
 alias lf="eza -f --color=always --icons=always --group-directories-first"
 alias fk='fuck'
 alias bal='bob update --all'
+alias n='nvim'
+alias v="vim"
+alias nf="nvim $(fzf)"
