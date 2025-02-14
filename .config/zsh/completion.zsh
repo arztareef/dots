@@ -40,11 +40,11 @@ zstyle ':completion:*' verbose yes
 
 # Format for messages and warnings
 zstyle ':completion:*:messages' format ' %F{magenta} -- %d --%f'
-zstyle ':completion:*:warnings' format ' %B %F{red}-- no matches found --%f %b'
+zstyle ':completion:*:warnings' format '%B%F{red}==> no matches found%f %b'
 
 # -- Corrections --
 # Format corrections output using _approximate
-zstyle ':completion:*:*:*:*:corrections' format '%F{yellow}!- %d (errors: %e) -!%f'
+zstyle ':completion:*:*:*:*:corrections' format '%U%B%F{blue}%d (errors: %e)%f%B%u'
 
 # -- Caching --
 # Enable caching for completion data

@@ -1,6 +1,9 @@
 # Exporting variables
 export EDITOR="nvim"
 export VISUAL="nvim"
+export BROWSER="firefox"
+export PAGER="less"
+export TERMINAL="st"
 export KEYTIMEOUT=1 # Faster vi-mode switching in shell
 
 # FOR LS_COLORS
