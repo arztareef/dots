@@ -1,0 +1,8 @@
+
+# Insert a blank line between prompts
+add_newline = false
+
+# Disable the line break between the first and second prompt lines
+[line_break]
+disabled = true
+
