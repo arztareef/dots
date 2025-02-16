@@ -10,5 +10,6 @@ alias lf="eza -f --color=always --icons=always --group-directories-first"
 alias fk='fuck'
 alias bal='bob update --all'
 alias n='nvim'
-alias v="vim"
+alias v='vim'
 alias cat="bat"
+alias szrc="source $ZDOTDIR/.zshrc"
