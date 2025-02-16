@@ -1,8 +1,39 @@
-
 # Insert a blank line between prompts
 add_newline = false
 
+# Format
+format = """
+$directory\
+$git_branch\
+$git_commit\
+$git_state\
+$git_metrics\
+$git_status\
+$golang\
+$lua\
+$rust\
+$env_var\
+$custom\
+$cmd_duration\
+$line_break\ 
+$jobs\
+$os\
+$shell\
+$character"""
+
 # Disable the line break between the first and second prompt lines
 [line_break]
-disabled = true
+disabled = false
 
+# Characters
+[character]
+success_symbol = '[~>](bold green)'
+error_symbol = '[~>](bold red)'
+
+[cmd_duration]
+min_time = 5000                        #ms
+format = 'in [$duration](bold yellow)'
+
+[directory]
+truncation_length = 1
+read_only = '[RO]'
