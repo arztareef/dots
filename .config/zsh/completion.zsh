@@ -11,10 +11,6 @@
 zstyle ':completion:*' completer _extensions _complete _approximate
 
 # -- Matching and Case Sensitivity --
-# Case insensitive path-completion
-zstyle ":completion:*" matcher-list 'm:{A-Zöäüa-zÖÄÜ}={a-zÖÄÜA-Zöäü}'
-
-# Partial name autocompletion with multiple matching strategies
 zstyle ':completion:*' matcher-list \
     '' \
     'm:{a-zA-Z}={A-Za-z}' \
