@@ -47,8 +47,8 @@ if [ -d "$HOME/.local/share/bob/nvim-bin/" ] ;
   then PATH="$HOME/.local/share/bob/nvim-bin/:$PATH"
 fi
 
-if [ -d "$HOME/.cargo/bin/" ] ;
-  then PATH="$HOME/.cargo/bin/:$PATH"
+if [ -d "$XDG_DATA_HOME/cargo/bin/" ] ;
+  then PATH="$XDG_DATA_HOME/cargo/bin/:$PATH"
 fi
 
 if [ -d "$HOME/.bin" ] ;
