@@ -7,11 +7,15 @@ export TERMINAL="st"
 export KEYTIMEOUT=1 # Faster vi-mode switching in shell
 export BAT_THEM="ansi"
 
+
 # XDG Related xorg config
 export XDG_DATA_HOME="$HOME/.local/share/"
 export XDG_CONFIG_HOME="$HOME/.config/"
 export XDG_STATE_HOME="$HOME/.local/state/"
 export XDG_CACHE_HOME="$HOME/.cache/"
+
+# GNUPG
+export GNUPGHOME="$XDG_DATA_HOME/gnupg"
 
 # XCURSOR_PATH
 export XCURSOR_PATH=/usr/share/icons:$XDG_DATA_HOME/icons
