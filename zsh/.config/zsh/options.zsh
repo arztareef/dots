@@ -22,3 +22,6 @@ export HISTFILE="$ZDOTDIR/.zsh_history"
 
 # Use vim-keybindings
 # bindkey -v
+
+# emacs ahh keybindings
+bindkey -e
