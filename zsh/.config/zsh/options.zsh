@@ -21,4 +21,4 @@ export SAVEHIST=256 # History File
 export HISTFILE="$ZDOTDIR/.zsh_history"
 
 # Use vim-keybindings
-bindkey -v
+# bindkey -v
