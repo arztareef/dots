@@ -56,7 +56,7 @@ ZSH_HIGHLIGHT_STYLES[assign]='fg=#cdd6f4'
 ZSH_HIGHLIGHT_STYLES[named-fd]='fg=#cdd6f4'
 ZSH_HIGHLIGHT_STYLES[numeric-fd]='fg=#cdd6f4'
 ## No category relevant in spec
-ZSH_HIGHLIGHT_STYLES[unknown-token]='fg=#eba0ac,bold,underline'
+ZSH_HIGHLIGHT_STYLES[unknown-token]='fg=#f38ba8,bold'
 ZSH_HIGHLIGHT_STYLES[path]='fg=#cba6f7,underline,bold'
 ZSH_HIGHLIGHT_STYLES[path_pathseparator]='fg=#fab387,underline,bold'
 ZSH_HIGHLIGHT_STYLES[path_prefix]='fg=#8caaee,underline'
