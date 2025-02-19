@@ -1,6 +1,9 @@
 # Insert a blank line between prompts
 add_newline = false
 
+# Timeout for commands executed by starship (in milliseconds).
+command_timeout = 5000
+
 # Format
 format = """
 $directory\
