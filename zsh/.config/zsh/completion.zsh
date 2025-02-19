@@ -45,7 +45,7 @@ zstyle ':completion:*' verbose yes
 
 # -- Messages and Warnings Formatting --
 # Customize the format for completion messages and warnings
-zstyle ':completion:*:messages' format 'messages bro messages %F{magenta} -- %d --%f'
+zstyle ':completion:*:messages' format '%F{yellow}==> %d %f'
 zstyle ':completion:*:warnings' format '%B%F{red}==> no matches found%f %b'
 
 # -- Corrections --
