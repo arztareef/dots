@@ -78,5 +78,10 @@ autoload bashcompinit && bashcompinit
 
 # Initialize the Zsh completion system
 autoload -Uz compinit
-compinit
+# https://gist.github.com/ctechols/ca1035271ad134841284?permalink_comment_id=2978873
+if [[ -n ${ZDOTDIR}/.zcompdump(#qN.mh+24) ]]; then
+	compinit;
+else
+	compinit -C;
+fi;
 # _comp_options+=(globdots)        # Include hidden files.
