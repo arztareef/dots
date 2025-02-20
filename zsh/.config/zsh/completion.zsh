@@ -13,15 +13,11 @@ zstyle ':completion:*' completer _extensions _complete _approximate
 # -- Matching and Case Sensitivity --
 # Define matching rules to allow flexible and case-insensitive matching.
 # (The commented block below shows an alternate configuration.)
-# zstyle ':completion:*' matcher-list \
-#     '' \
-#     'm:{a-zA-Z}={A-Za-z}' \
-#     'r:|[._-]=* r:|=*' \
-#     'l:|=* r:|=*'
-zstyle ':completion:*' matcher-list '' \
-            'm:{a-z\-}={A-Z\_}' \
-            'r:[^[:alpha:]]||[[:alpha:]]=** r:|=* m:{a-z\-}={A-Z\_}' \
-            'r:|?=** m:{a-z\-}={A-Z\_}'
+zstyle ':completion:*' matcher-list \
+    '' \
+    'm:{a-zA-Z}={A-Za-z}' \
+    'r:|[._-]=* r:|=*' \
+    'l:|=* r:|=*'
 
 # -- Directory and File Handling --
 # Enable completion for parent directory ("..")
