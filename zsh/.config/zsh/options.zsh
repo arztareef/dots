@@ -16,8 +16,8 @@ setopt INC_APPEND_HISTORY  # adds commands as they are typed, not at shell exit
 setopt LIST_PACKED         # Pack the completions into a smaller stuff idk
 
 # History
-export HISTSIZE=128 # Memory
-export SAVEHIST=256 # History File
+export HISTSIZE=512 # Memory
+export SAVEHIST=1024 # History File
 export HISTFILE="$ZDOTDIR/.zsh_history"
 
 # Use vim-keybindings
