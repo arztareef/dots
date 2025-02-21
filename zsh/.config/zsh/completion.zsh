@@ -28,7 +28,7 @@ zstyle ':completion:*' squeeze-slashes true
 
 # -- Menu Selection and Output Grouping --
 # Enable interactive menu selection for completions
-# zstyle ':completion:*' menu select
+zstyle ':completion:*' menu select
 
 # List directories before files in the completion list
 zstyle ':completion:*' list-dirs-first true
