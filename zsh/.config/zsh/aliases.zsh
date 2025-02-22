@@ -21,7 +21,7 @@ then
   alias cat="bat"
 fi
 
-if command -v z 2>&1 >/dev/null
+if command -v zoxide 2>&1 >/dev/null
 then
   alias cd="z"
 fi
