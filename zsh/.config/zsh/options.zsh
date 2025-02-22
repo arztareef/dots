@@ -25,7 +25,6 @@ setopt EXTENDED_GLOB          # Enable advanced globbing features.
 
 # Interactive Options
 setopt interactivecomments    # Allow comments in interactive sessions.
-setopt LIST_PACKED            # Pack completions into a compact column format.
 
 # Keybindings
 bindkey -e                  # Use Emacs-style keybindings.
