@@ -12,7 +12,7 @@ source "${ZINIT_HOME}/zinit.zsh"
 
 # syntax-highlighting, autosuggestions
 zinit ice silent wait"0"; zinit light zsh-users/zsh-syntax-highlighting
-zinit ice silent wait"0"; zinit light zsh-users/zsh-autosuggestions
+zinit light zsh-users/zsh-autosuggestions
 
 # Zsh-syntax highlighting colorscheme
 source "$ZDOTDIR/themes/mocha.zsh"
